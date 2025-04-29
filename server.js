@@ -22,7 +22,7 @@ const upload = multer({ storage: storage });
 
 mongoose
 .connect(
-    "mongodb+srv://lmmurphy04:mduzf5dhqyqctgo2@cluster0.v3tf38q.mongodb.net/"
+    "mongodb+srv://lmmurphy04:vQpyVsn48AMzybrd@cluster0.v3tf38q.mongodb.net/"
 )
 .then(() => {
     console.log("connected to mongoDB");
@@ -42,7 +42,7 @@ const cookieSchema = new mongoose.Schema({
     main_image: String
 });
 
-const House = mongoose.model("Cookie", cookieSchema);
+const Cookie = mongoose.model("Cookie", cookieSchema);
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
